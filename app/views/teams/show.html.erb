@@ -1,0 +1,17 @@
+<h1> <%= @team.name %> </h1>
+
+<p> <%= @team.owner %> </p>
+<p> Wins: <%= @team.wins %> </p>
+<p> Losses: <%= @team.losses %> </p>
+<img src="<%=@team.img_url%>">
+
+<%= link_to 'Edit This Team', edit_team_path(@team) %>
+<%= link_to 'Delete This Team', team_path(@team), method: :delete %>
+
+<h3> Players </h3>
+<% @team.players.each do |player| %>
+  <p> <%= player.name %> </p>
+  <p> <%= player.position %> </p>
+  <p> <%= player.p_team %> </p>
+  <p> <%= player.notes %> </p>
+  <%end%>

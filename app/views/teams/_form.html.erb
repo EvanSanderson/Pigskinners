@@ -1,0 +1,32 @@
+<%=form_for @team do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :owner %>
+    <%= f.text_field :owner %>
+  </p>
+
+  <p>
+    <%= f.label :img_url %>
+    <%= f.text_field :img_url %>
+  </p>
+
+  <p>
+    <%= f.label :wins %>
+    <%= f.text_field :wins %>
+  </p>
+
+  <p>
+    <%= f.label :losses %>
+    <%= f.text_field :losses %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+  <%end%>
