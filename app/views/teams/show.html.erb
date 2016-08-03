@@ -6,13 +6,13 @@
   <p> Losses: <%= @team.losses %> </p>
   <img src="<%=@team.img_url%>">
 
-  <p> <%= link_to 'Edit This Team', edit_team_path(@team) if @current_user %> | <%= link_to 'Delete This Team', team_path(@team), method: :delete if @current_user %></p>
+  <p> <%= link_to 'Edit This Team', edit_team_path(@team) %> | <%= link_to 'Delete This Team', team_path(@team), method: :delete %></p>
 </div>
 
 <div class = "teamPlayers">
-    <h3> Players  <%= link_to "+", new_team_player_path(@team) if @current_user %> </h3>
+    <h3> Players  <%= link_to "+", new_team_player_path(@team) %> </h3>
     <% @team.players.each do |player| %>
-        <p> <%= link_to player.name, team_player_path(@team, player) if @current_user %> <%= link_to "(-)", team_player_path(@team, player), method: :delete, data: {confirm: "Are you sure you want to delete this player?"} %> </p>
+        <p> <%= link_to player.name, team_player_path(@team, player) %> <%= link_to "(-)", team_player_path(@team, player), method: :delete, data: {confirm: "Are you sure you want to delete this player?"} %> </p>
         <p> <%= player.notes %> </p>
       <%end%>
 </div>

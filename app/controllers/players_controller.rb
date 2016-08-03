@@ -5,14 +5,12 @@ class PlayersController < ApplicationController
   end
 
   def new
-    redirect_to root_path unless @current_user
 
     @team = Team.find(params[:team_id])
     @player = @team.players.build
   end
 
   def create
-    redirect_to root_path unless @current_user
 
     @team = Team.find(params[:team_id])
     @player = @team.players.create(params_player)
@@ -31,14 +29,12 @@ end
   end
 
   def edit
-    redirect_to root_path unless @current_user
 
     @team = Team.find(params[:team_id])
     @player = Player.find(params[:id])
   end
 
   def update
-    redirect_to root_path unless @current_user
 
     @team = Team.find(params[:team_id])
     @player = @team.players.find(params[:id])
@@ -52,7 +48,6 @@ end
   end
 
   def destroy
-    redirect_to root_path unless @current_user
 
     @team = Team.find(params[:team_id])
     @player = @team.players.find(params[:id])
