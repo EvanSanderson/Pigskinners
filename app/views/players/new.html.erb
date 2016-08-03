@@ -7,12 +7,12 @@
     </p>
 
     <p>
-      <%= f.label :position %>
-      <%= f.text_field :position %>
+      <%= f.label :position, "Position" %>
+      <%= f.select :position, ["QB", "RB", "WR", "TE", "K", "DST"] %>
     </p>
 
     <p>
-      <%= f.label :p_team %>
+      <%= f.label :p_team, "Player Team" %>
       <%= f.text_field :p_team %>
     </p>
 

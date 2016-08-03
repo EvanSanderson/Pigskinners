@@ -13,3 +13,89 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: 'Cardo', serif;
+  color: #141301;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: relative;
+}
+
+.background::after {
+  content: "";
+  background: url("http://wallpapercave.com/wp/59C8TiU.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.teams {
+  display: inline-block;
+  width: 40%;
+  height: 50%;
+  text-align: center;
+  margin-top: 3em;
+  margin-left: 3em;
+  background: rgba(	211, 203, 183, 0.6);
+  background-size: contain;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.teams img {
+  width: 30%;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.header {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.team {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  margin-right: 10%;
+  margin-left: 10%;
+  background: rgba(	211, 203, 183, 0.6);
+  border-radius: 10px;
+}
+
+.team img {
+  width: 40%;
+  border-radius: 5px;
+  border: 2px solid black;
+
+}
+.teamPlayers {
+  display: inline-block;
+  width: 40%;
+  text-align: center;
+  background: rgba(	211, 203, 183, 0.6);
+  border-left: 5px solid black;
+}
+
+.flash {
+  background: #D8D0C1;
+  text-align: center;
+  color: #001011;
+}

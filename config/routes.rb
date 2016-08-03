@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :teams do
     resources :players
   end
-
+  resources :users
+  resource :session
+  
   get "/players" => "players#all_index"
 end

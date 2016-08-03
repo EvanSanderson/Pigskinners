@@ -3,16 +3,27 @@
   <head>
     <title>FantasyFootball</title>
     <%= csrf_meta_tags %>
-
+<link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <h1> The Pigskinners! <%= link_to '+', new_team_path %></h1>
+    <div class="background">
+    <div class="header">
+    <h1> The Pigskinners! <%= link_to '+', new_team_path if @current_user %></h1>
+    <% if @current_user %>
+      <%= link_to "Hey there, #{@current_user.username}", user_path(@current_user) %>
+      <%= link_to "Sign Out", session_path, method: :delete %>
+    <% else %>
+      <p> <%= link_to "Sign Up", new_user_path %> | <%= link_to "Sign In", new_session_path %> </p>
+    <% end %>
     <h3> <%= link_to 'Team View', teams_path %> | <%= link_to "Player View", players_path %> </h3>
+  </div>
     <% flash.each do |type, message| %>
-      <p class="flash <%= type %>"> <%=message%> </p>
+      <p class="<%= type %>"> <%=message%> </p>
       <%end%>
+
     <%= yield %>
+  </div>
   </body>
 </html>
