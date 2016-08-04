@@ -1,4 +1,5 @@
 class PlayersController < ApplicationController
+before_action :authenticate_user!
 
   def all_index
     @players = Player.all
