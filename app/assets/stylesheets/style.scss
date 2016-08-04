@@ -1,0 +1,109 @@
+$bColor: rgba(211, 203, 183, 0.6);
+$teamColor: rgba(211, 203, 183, 0.6);
+
+body {
+  background: $bColor;
+  text-align: center;
+}
+
+.header {
+  display: block;
+
+
+  h1 {
+    font-size: 3em;
+  }
+
+  a {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  a:hover {
+    background: #E37268;
+    color: white;
+  }
+
+}
+
+.teams {
+
+  display: inline-block;
+  padding: 10px;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+
+  img {
+    width: 40%;
+  }
+
+  a {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1em;
+
+  }
+  a:hover {
+    background: #E37268;
+    color: white;
+  }
+}
+
+.form {
+  margin: 0 auto;
+  display: inline-block;
+  width: 40%;
+  text-align: center;
+  background: $teamColor;
+  border: 5px solid black;
+}
+
+.team {
+  display: inline-block;
+  width: 40%;
+  margin-left: 3em;
+  text-align: center;
+  background: $teamColor;
+  border: 5px solid black;
+
+
+   img {
+  width: 40%;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+a {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 1em;
+
+}
+a:hover {
+  background: #E37268;
+  color: white;
+}
+
+}
+
+.teamPlayers {
+  display: inline-block;
+  width: 40%;
+  margin-left: 3em;
+  text-align: center;
+  background: $teamColor;
+  border: 5px solid black;
+
+}
+
+.allPlayers {
+  display: inline-block;
+  width: 40%;
+  margin-left: 3em;
+  text-align: center;
+  background: $teamColor;
+  border: 5px solid black;
+}

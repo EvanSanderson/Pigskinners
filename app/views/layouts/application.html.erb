@@ -13,6 +13,7 @@
     <h1> The Pigskinners! <%= link_to '+', new_team_path %></h1>
     <h3> <%= link_to 'Team View', teams_path %> | <%= link_to "Player View", players_path %> </h3>
   </div>
+
     <% flash.each do |type, message| %>
       <p class="<%= type %>"> <%=message%> </p>
       <%end%>

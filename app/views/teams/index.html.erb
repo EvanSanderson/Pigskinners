@@ -1,10 +1,8 @@
 
 <% @teams.each do |team| %>
-  <div class = "teams"
-   <h1><%= link_to team.name, team_path(team) %> </h1>
-  <p> <%= team.owner %> </p>
-  <p> Wins: <%= team.wins %> </p>
-  <p> Losses: <%= team.losses %> </p>
+  <div class = "teams">
+   <h1> <%= link_to team.name, team_path(team) %> </h1>
+  <h2> Owner: <%= team.owner %> </h2>
   <img src="<%=team.img_url%>">
 </div>
 <%end%>

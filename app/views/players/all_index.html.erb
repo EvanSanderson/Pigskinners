@@ -1,6 +1,8 @@
+<div class="allPlayers">
 <h1> All Players! </h1>
 <h3> Look through the total list of players here. </h3>
 
 <% @players.each do |player| %>
 <h4> <%= link_to player.name, team_player_path(player.team, player) %> -- <%= player.position %> -- <%= player.team.name %> </h4>
 <% end %>
+</div>
